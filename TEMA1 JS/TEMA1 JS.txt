@@ -1,0 +1,100 @@
+Exercitiul 1
+
+function is_string(val) {
+  return typeof val === "string";
+}
+console.log(is_string('w3resource'));
+console.log(is_string([1, 2, 4, 0]));
+---------------------------------------
+
+Exercitiul 2
+
+function is_Blank(val) {
+  return !val || val.length === 0;
+}
+
+console.log(is_Blank(''));
+console.log(is_Blank('abc'));
+------------------------------------------------
+Exercitiul 3
+
+function string_to_array(val) {
+  return val.split(" ");
+}
+console.log(string_to_array("Robin Singh"));
+--------------------------------------------------
+
+Exercitiul 4
+
+function abbrev_name(val) {
+  var abreviere = val.trim().split(" ");
+     return (abreviere[0] + " " + abreviere[1].charAt(0) + ".");
+}
+console.log(abbrev_name("Robin Singh"));
+
+--------------------------------------------------------------------
+
+Exercitiul 5
+
+function capitalize(val) {
+  return val.charAt(0).toUpperCase() + val.slice(1);
+}
+
+console.log(capitalize('js string exercises'));
+"Js string exercises"
+
+-----------------------------------------------------------------------
+
+Exercitiul 6
+
+truncate_string = function(val, length) {
+      return val.slice(0, length);
+  }
+console.log(truncate_string("Robin Singh",4));
+-------------------------------------------------------------------
+
+Exercitiul 7
+
+function isUpperCaseAt(val1,val2) {
+ return val1.charAt(val2).toUpperCase() === val1.charAt(val2);
+    }
+console.log(isUpperCaseAt('Js STRING EXERCISES', 1));
+-------------------------------------------------------------------
+
+Exercitiul 8
+
+function insert(str1, str2, index)  {  
+   return str1.slice(0, index) + str2 + str1.slice(index);
+}
+console.log(insert('We are doing some exercises.','JavaScript ',18));
+--------------------------------------------------------------------
+
+Exercitiul 9
+
+function remove_first_occurrence(str1,str2)       {
+	var index = str1.indexOf(str2);
+	return str1.slice(0,index)+str1.slice(index + str2.length);
+}
+	
+console.log(remove_first_occurrence("The quick brown fox jumps over the lazy dog", 'the'));
+---------------------------------------------------------------------------------
+
+Exercitiul 10
+
+function compare_strings(val1,val2) {
+  return val1.toUpperCase() === val2.toUpperCase();
+}
+
+
+console.log(compare_strings('abcd', 'AbcD'));
+
+----------------------------------------------------------------------------
+
+Exercitiul 11
+
+function Uncapitalize(val) {
+  return val.charAt(0).toLowerCase() + val.slice(1);
+}
+
+console.log(Uncapitalize('Js string exercises'));
+-----------------------------------------------------------------------------
