@@ -1,4 +1,5 @@
 Exercitiul 1
+Scrieti o functie care verifica daca un input este sau nu de tip string. 
 
 function is_string(val) {
   return typeof val === "string";
@@ -6,95 +7,89 @@ function is_string(val) {
 console.log(is_string('w3resource'));
 console.log(is_string([1, 2, 4, 0]));
 ---------------------------------------
-
 Exercitiul 2
+Scrieti o functie care verifica daca un string este gol sau nu.
 
 function is_Blank(val) {
   return !val || val.length === 0;
 }
-
 console.log(is_Blank(''));
 console.log(is_Blank('abc'));
 ------------------------------------------------
 Exercitiul 3
+Scrieti o functie accepta ca input un string si il transforma intr-un array de cuvinte:
 
 function string_to_array(val) {
   return val.split(" ");
 }
 console.log(string_to_array("Robin Singh"));
 --------------------------------------------------
-
 Exercitiul 4
+Scrieti o functie care transforma un string in forma abreviata:
 
 function abbrev_name(val) {
   var abreviere = val.trim().split(" ");
      return (abreviere[0] + " " + abreviere[1].charAt(0) + ".");
 }
 console.log(abbrev_name("Robin Singh"));
-
 --------------------------------------------------------------------
-
 Exercitiul 5
+Scrieti o functie care face prima litera a unui string sa fie de tip capital ( litera mare ):
 
 function capitalize(val) {
   return val.charAt(0).toUpperCase() + val.slice(1);
 }
-
 console.log(capitalize('js string exercises'));
 "Js string exercises"
-
 -----------------------------------------------------------------------
-
 Exercitiul 6
+Scrieti o functie care elimina un numar specificat de caractere pornind de la inceputul string-ului:
 
 truncate_string = function(val, length) {
       return val.slice(0, length);
   }
 console.log(truncate_string("Robin Singh",4));
 -------------------------------------------------------------------
-
 Exercitiul 7
+Scrieti o functie care specifica daca o caracterul de la o anumita pozitie specificata dintr-un string este litera mare sau
+nu:
 
 function isUpperCaseAt(val1,val2) {
  return val1.charAt(val2).toUpperCase() === val1.charAt(val2);
     }
 console.log(isUpperCaseAt('Js STRING EXERCISES', 1));
 -------------------------------------------------------------------
-
 Exercitiul 8
+Scrieti o functie care insereaza un string la o anumita pozitie intr-un alt string:
 
 function insert(str1, str2, index)  {  
    return str1.slice(0, index) + str2 + str1.slice(index);
 }
 console.log(insert('We are doing some exercises.','JavaScript ',18));
---------------------------------------------------------------------
-
+-------------------------------------------------------------------
 Exercitiul 9
+Scrieti o functie care elimina prima aparitie a unui string dintr-un alt string:
 
 function remove_first_occurrence(str1,str2)       {
 	var index = str1.indexOf(str2);
 	return str1.slice(0,index)+str1.slice(index + str2.length);
-}
-	
+}	
 console.log(remove_first_occurrence("The quick brown fox jumps over the lazy dog", 'the'));
 ---------------------------------------------------------------------------------
-
 Exercitiul 10
+Scrieti o functie care compara doua string-uri case-insensitive:
 
 function compare_strings(val1,val2) {
   return val1.toUpperCase() === val2.toUpperCase();
 }
-
-
 console.log(compare_strings('abcd', 'AbcD'));
 
 ----------------------------------------------------------------------------
-
 Exercitiul 11
+Scrieti o functie care face ca primul caracter a unui string sa fie de tip uncapital:
 
 function Uncapitalize(val) {
   return val.charAt(0).toLowerCase() + val.slice(1);
 }
-
 console.log(Uncapitalize('Js string exercises'));
 -----------------------------------------------------------------------------
