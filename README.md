@@ -1,1 +1,1 @@
-# JAVA-SCRIPT
+# Wantsome - JavaScript - Homeworks
