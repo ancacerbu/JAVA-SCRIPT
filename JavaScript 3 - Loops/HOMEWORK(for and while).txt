@@ -1,0 +1,117 @@
+1. Scrieti un for care itereaza de la 0 la 20. Pentru fiecare iteratie, verifica daca numarul curent este par sau impar si va
+raporta acest lucru in consola. (exemplu: “2 este numar par”);
+Scrieti functia in doua variante: while si for
+
+REZOLVARE METODA 1(FOR)
+
+//declar fuctia named tipNumar
+function tipNumar() {
+//scriu un for care itereaza de la 0 la 20
+ for (var i = 0; i <=20; i++) {
+   //verificam daca valoarea numerica pentru i din cadrul iteratiei curente este para
+   if (i % 2 == 0) {
+     console.log(i+" este numar par");
+   }
+// daca executia ajunge aici, inseamna ca i este par si raportam
+//verificam daca valoarea numerica pentru i din cadrul iteratiei curente este impara
+   else {
+     console.log(i+" este numar impar");
+   }
+// daca executia ajunge aici, inseamna ca i este impar si raportam
+ } 
+}
+//apelam functia pentru a afisa ce anume ruleaza
+tipNumar()
+
+REZOLVARE METODA 2(WHILE)
+
+//declar variabila i, declar variaila text, declar fnctia tipNumber
+var i = 0;
+var text = " ";
+function tipNumber(){
+//pun conditia atat timp cat variaila i este mai mica sau egala cu 20
+while (i < 20) {
+  i++;
+  if(i%2 == 0){
+//daca i indeplineste conditia de numar par
+    text+=i+" este numar par "+"\n";
+//afisez i este numar par
+  }
+  else {
+    //daca i nu indeplineste conditia de numar par
+    text+=i+" este numar impar "+"\n";
+    //afisez i este numar impar
+  }
+}
+  console.log(text);
+}
+tipNumber()
+//apelez functia
+
+2. Scrieti un for care itereaza de la 0 la 10. Pentru fiecare iteratie, se va multiplica numarul curent cu 9 si se va afisa
+rezultatul. (exemplu: “3*9=27”).
+ Scrieti functia in doua variante: while si for
+
+REZOLVARE METODA 1(FOR)
+
+//declar variabila text
+var text=" ";
+//declar functia number
+function number() {
+//scriu un for care itereaza de la 0 la 10
+ for(var i=0;i<=10;i++) {
+   //pentru fiecare iteratie aplic inmultire cu 9
+  text+=i+"*9="+i*9+"\n";
+  } 
+  console.log(text); 
+}
+number();
+//apelez functia number
+
+REZOLVARE METODA 2 (WHILE)
+
+//declar variabila text,variabila i
+var i=0;
+var text="";
+//declar functia number
+function number() {
+  //atat timp cat i mai mic ca 10
+while(i<10) {
+  i++;
+//calculeaza i inmultit cu 9 egal rezultat
+    text+=i +"*9="+i*9+"\n";
+  } 
+  console.log(text);
+}
+//apel functia number
+number()
+
+3. Pentru fiecare cifra de la 1 la 10, afisati tabla inmultirii.
+(exemplu: 1 * 0 = 0
+1 * 1 = 1
+…
+1 * 10 = 10 )
+Pentru a afisa in consola pe linie noua puteti concatena un string, la final, cu + “\n”.
+
+//declar variabila text
+var text="";
+//declar functia inmultire
+function inmultire() {
+//declar un for ce itereaza de la 1 la 10
+  for(var i=0;i<=10;i++) {
+//calcul inmultire 1 cu i si afisare rezultat
+    text+= "1*"+i+"="+1*i+"\n";
+  }
+  console.log(text)
+}
+//apelez functia
+inmultire(text)
+
+
+4. Pentru functia dezvoltata la cerinta 2 de la tema anterioara, verificati si afisati in consola fiecare calificativ care se
+poate obtine pentru punctajele incepand de 1 la 10. (exemplu: “Pentru 2, obtii calificativul E. \n Pentru 7, obtii
+calificativul B \n ...samd “). Atentie: Rezultatul calificativul trebuie sa fie obtinut prin utilizarea functiei
+dezvoltate la tema anterioara
+
+
+
