@@ -1,0 +1,169 @@
+// Ex1
+// Scrieti o functie care sa protejeze emailul unui user
+// de ex: myFunction("ovidiu.grigoras@test.com") sa printeze "ovidiu...@test.com" sau "ovid...@test.com"
+
+function protectEmail(email) {
+  var email2=email.split("@");
+  return email2[0].slice(0,4)+"..."+"@"+email2[1];
+}
+console.log(protectEmail("ovidiu.grigoras@test.com"))
+-----------------------------------------------------------------------------------------------------------------
+// Ex2
+// Scrieti o functie care sa faca uppercase la fiecare litera de la fiecare inceput de string
+// de ex: myFunction("i am superman") sa printeze "I Am Superman"
+
+function stringCamelCase (str) {
+  str = str.toLowerCase().split(' ');
+  for (var i = 0; i < str.length; i++) {
+    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+  }
+ return str.join(' ');
+}
+console.log(stringCamelCase("i am superman"))
+-----------------------------------------------------------------------------------------------------------------
+// Ex3
+// Scrieti o functie care sa schimbe literele unui string daca sunt uppercase cu lowercase si invers
+// ex: myFunction("xxXyYzZZ") sa printeze "XXxYyZzz"
+
+function changeUpperLower(str) {
+  var text = "";
+  for(var i = 0; i < str.length; i++) {
+    var string = str[i];
+    if(string === string.toUpperCase()) {
+      text += string.toLowerCase();
+    }
+    else {
+      text += string.toUpperCase();
+    }           
+  }
+  return text;
+}
+console.log(changeUpperLower("xxXyYzZZ"))
+-----------------------------------------------------------------------------------------------------------------
+// Ex4
+// Scrieti o functie care sa concateneze un string de cate ori ii zicem
+// de ex: myFunction("Wantsome", 2) sa printeze "WantsomeWantsome"
+
+function repeatString(str,n) {
+  var newStr="";
+  while(n > 0) {
+    newStr += str;
+    n--;
+  }
+  return newStr;
+}
+console.log(repeatString("Wantsome", 2))
+-----------------------------------------------------------------------------------------------------------------
+// Ex5
+// A palindrome is a word or a phrase that is the same whether you read it backward or forwards, for example, the word 'level'.
+// Scrieti o functie care verifica daca un string este palindrom; Implementati mai multe variante
+
+// Metoda1
+
+function palindrom (str) {
+  return str == str.split('').reverse().join('');
+}
+console.log(palindrom("cojoc"))
+
+// Metoda2
+
+function palindrom(str) {  
+  for (var i=0; i<str.length/2; i++) {
+    if (str.charAt(i)!== str.charAt(str.length-1-i)) {
+      return false;
+    }
+    else {
+      return true; 
+    }
+  }
+}  
+console.log(palindrom("cojoc"))
+
+// Metoda3
+
+function palindrom(str) {
+  var newStr=str.split('');
+  var first=newStr.shift();
+  var last=newStr.pop();   
+  if (first!==last) {
+    return false;
+  }
+  if (newStr.length < 2) {
+    return true;
+  }
+  return palindrom(newStr.join(''));
+}
+console.log(palindrom("cojoc"))
+-----------------------------------------------------------------------------------------------------------------
+// Ex6
+// Implementati o functie care accepta ca argument un array compus din mai multe array-uri de valori numerice si returneaza un array care contine ca si elemente cele mai mari numere din fiecare array
+
+function maxNumber(arr) {
+  var arr1 = [0,0,0];
+  for(var i=0; i<arr.length; i++) {
+    for(var subi = 0; subi < arr[i].length; subi++) {
+      if(arr[i][subi] > arr1[i]) { 
+        arr1[i] = arr[i][subi];
+      }
+    }
+  }
+  return arr1;
+}
+console.log(maxNumber([[8, 7, 1, 6], [10, 99, 56, 75], [101,856,358,957]]));
+-----------------------------------------------------------------------------------------------------------------
+// Ex7
+// Implementati o functie care face reverse la un string
+
+function reverse(str) {
+  return str.split("").reverse().join("");
+}
+console.log(reverse("Wantsome"));
+-----------------------------------------------------------------------------------------------------------------
+// Ex8 
+Implementati o functie care calculeaza factorialul unui numar
+
+function factorial (nr) {
+  var result=1;
+  for(i=1;i<=nr;i++) {
+    result=result*i;
+  }
+  return result;
+}
+console.log(factorial(4))
+-----------------------------------------------------------------------------------------------------------------
+// Ex9
+// Implementati o functie care accepta ca argumente doua string-uri si verifica daca primul se termina cu cel din urma
+
+function myString(str1,str2) {
+  if (str1.substr(-str2.length) === str2) {
+    return true;
+  } 
+  else {
+    return false;
+  }
+}
+console.log(myString("bianca","anca"));
+-----------------------------------------------------------------------------------------------------------------
+// Ex10
+// Implementati o functie care accepta doua argumente: un array si o functie de adevar. Functia returneaza primul element din array care trece testul specificat
+-----------------------------------------------------------------------------------------------------------------
+// Ex11
+// Implementati o functie care accepta ca argumente doua string-uri si verifica daca primul string contine toate literele celui de-al doilea string
+-----------------------------------------------------------------------------------------------------------------
+
+// Ex 12
+// Implementati o functie care accepta ca argumente doi parametri: un array si o valoare. Functia afiseaza fiecare element al array-ului pana cand intalneste elementul cu valoarea specificata
+-----------------------------------------------------------------------------------------------------------------
+// Ex 13
+// Scrieti o functie care elimina toate valorile false dintr-un array: false, null, 0, "", undefined, NaN
+-----------------------------------------------------------------------------------------------------------------
+// Ex 14
+// Scrieti o functie care repeta un string de n ori specificate
+
+function repeteString(str,n){
+  if(n>0)
+    return string.repeat(n);
+  }
+console.log(repeteString("Primavara",5));
+-----------------------------------------------------------------------------------------------------------------
+
