@@ -149,6 +149,19 @@ console.log(myString("bianca","anca"));
 -----------------------------------------------------------------------------------------------------------------
 // Ex11
 // Implementati o functie care accepta ca argumente doua string-uri si verifica daca primul string contine toate literele celui de-al doilea string
+
+function myStr(str1,str2) {
+  var result=“”;
+  for(i=0;i<str.2length;i++) {
+    result=str1.replace(str2[i],””);
+      if(result===str1) {
+        return false;
+      }
+      str1=result;
+  }
+  return true;
+}
+console.log(myStr(“bianca”,”anca”))
 -----------------------------------------------------------------------------------------------------------------
 
 // Ex 12
