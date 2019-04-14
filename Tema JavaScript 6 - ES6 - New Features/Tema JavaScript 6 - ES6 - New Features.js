@@ -146,26 +146,26 @@
 // // returns 'Bart'
 // list([])
 // // returns '' 
-list = (names) => {
-	let result = "";	
-	if (names.length === 1) {
-		return names[0].name;
-	} 
-  else if (names.length === 2) {
-		return names[0].name + " & " + names[1].name;
-	} 
-  else if (names.length === 0) {
-		return "";
-	} 
-  else {
-    for (let i = 0; i < names.length - 2; i++) {
-      result += names[i].name + ", ";
-    }
-    result = result + names[names.length-2].name + " & " + names[names.length-1].name	
-    return result;
-  }
-}
-console.log(list([ {name: 'Bart'}, {name: 'Lisa'} ]))
+// list = (names) => {
+// 	let result = "";	
+// 	if (names.length === 1) {
+// 		return names[0].name;
+// 	} 
+//   else if (names.length === 2) {
+// 		return names[0].name + " & " + names[1].name;
+// 	} 
+//   else if (names.length === 0) {
+// 		return "";
+// 	} 
+//   else {
+//     for (let i = 0; i < names.length - 2; i++) {
+//       result += names[i].name + ", ";
+//     }
+//     result = result + names[names.length-2].name + " & " + names[names.length-1].name	
+//     return result;
+//   }
+// }
+// console.log(list([ {name: 'Bart'}, {name: 'Lisa'} ]))
 
 
 // EX.4(www.codewars.com)
